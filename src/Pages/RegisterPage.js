@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import Layout from "Component/layout/index";
 
 export default class RegisterPage extends Component {
   render() {
     return (
-      <div>
-        <h1>Hello from Register Page</h1>
-      </div>
+      <Layout>
+        <h1>Hello from Register</h1>
+      </Layout>
     );
   }
 }

@@ -1,0 +1,42 @@
+.navbar {
+  background-color: #2f3c80;
+  height: 80px;
+  padding: 8px 0 !important;
+  .btn {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .btn-logo {
+    width: 180px;
+    height: auto;
+    img {
+      width: 140px;
+      height: auto;
+    }
+  }
+
+  .navbar-collapse {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          &:hover {
+            color: #d8d8d8;
+          }
+          &.btn-login-navbar {
+            border: 1px solid #ffffff;
+            border-radius: 8px;
+            width: 7.23rem;
+            margin: 0 1.23rem;
+          }
+          &.btn-register-navbar {
+            background-color: #495dc9;
+            border-radius: 8px;
+            width: 7.23rem;
+          }
+        }
+      }
+    }
+  }
+}

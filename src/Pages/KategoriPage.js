@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import Layout from "Component/layout/index";
 
 export default class KategoriPage extends Component {
   render() {
     return (
-      <div>
-        <h1>Hello from kategori page</h1>
-      </div>
+      <Layout>
+        <h1>Hello from Kategori Page</h1>
+      </Layout>
     );
   }
 }

@@ -1,6 +1,9 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { Home, Detail, Kategori, Error, Login, Register } from "Pages";
+import { Home, Detail, Kategori, Error, Login, Register, Example } from "Pages";
+
+// Style Global
+import "Assets/Scss/style.scss";
 
 function App() {
   return (
@@ -11,6 +14,7 @@ function App() {
         <Route path="/kelas-detail/:slugDetailKelas" component={Detail} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
+        <Route path="/example" component={Example} />
         <Route component={Error} />
       </Switch>
     </>
