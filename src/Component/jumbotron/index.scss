@@ -1,12 +1,18 @@
+.container-fluid {
+  width: 100%;
+}
 .hero {
   padding: 0;
+  height: 500px;
+  position: relative;
   .img-fluid {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .konten-hero {
     position: absolute;
-    top: 220px;
-    left: 110px;
+    top: 0;
     color: #ffffff;
     width: 471px;
     h3 {
@@ -19,10 +25,12 @@
       margin: 3.5rem 0;
     }
     .btn-hero {
-      width: 261px;
       background-color: #f4a81e;
+      padding: 0.8rem 3.2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
       color: #ffffff;
-      border-radius: 20px;
     }
   }
 }
