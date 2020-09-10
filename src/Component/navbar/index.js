@@ -7,7 +7,7 @@ import Logo from "Assets/Images/logo.png";
 
 export default function index() {
   return (
-    <div className="nav-collapse">
+    <div className="nav-collapse container">
       <div className="logo-btn">
         <Link to="/">
           <img src={Logo} alt="" />

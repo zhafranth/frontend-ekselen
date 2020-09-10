@@ -38,7 +38,7 @@ export default function index() {
           </div>
           <p className="nilai-kelas">5.0</p>
         </div>
-        <div className="border" />
+        <hr />
         <div className="info-detail-kelas">
           <div className=" info-detail-kelas-item">
             <img src={StackLessonIcon} alt="" />

@@ -8,7 +8,7 @@ import ImgJumbotron from "Assets/Images/Jumbotron.png";
 
 export default function index() {
   return (
-    <div className="container-fluid hero">
+    <div className="container-fluid hero p-0">
       <img src={ImgJumbotron} alt="" className="img-fluid" />
 
       <div className="container">

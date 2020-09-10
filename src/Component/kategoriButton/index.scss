@@ -1,0 +1,22 @@
+.btn-kategori {
+  background-color: #d3daff;
+  font-weight: 300;
+  color: #2f3c80;
+  display: flex;
+  padding: 5px 8px;
+  width: 165px;
+  height: 55px;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-decoration: none !important;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  &:hover {
+    color: #3d4fad;
+  }
+  p {
+    margin: 0;
+  }
+}

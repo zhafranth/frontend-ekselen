@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import { Home, Detail, Kategori, Error, Login, Register, Example } from "Pages";
 
 // Style Global
-import "Assets/Style/style.scss";
+import "Assets/Scss/style.scss";
 
 function App() {
   return (

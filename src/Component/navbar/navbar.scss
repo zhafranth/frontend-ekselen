@@ -5,7 +5,6 @@
 
   .navbar-btn {
     .navbar-btn-item {
-
       margin-right: 2rem;
     }
   }
@@ -29,15 +28,19 @@
     }
 
     .btn-register {
-      background-color: #495DC9;
+      background-color: #495dc9;
       padding: 4px 16px;
       border-radius: 10px;
     }
   }
 
   a {
+    font-size: 14px;
     color: #ffffff;
-    text-decoration: none;
+    text-decoration: none !important;
     text-transform: uppercase;
+    &:hover {
+      color: #dfdfdf;
+    }
   }
 }

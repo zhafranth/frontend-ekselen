@@ -2,26 +2,28 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Carousel } from "antd";
+import { Carousel, Row, Col } from "antd";
 import Card from "Component/card";
 
+// Data
+import Data from "JSON/landingPage.json";
+
 // Component Test
-import Jumbotron from "Component/jumbotron";
+import Jumbotron from "Component/jumbotron"; /**Done */
 import ExampleComp from "Component/example/example";
+import CategoryBtn from "Component/kategoriButton";
+import Navbar from "Component/navbar";
+import Layout from "Component/layout";
+import ListRekomendasi from "Component/listRekomendasi";
+import ListKategori from "Component/listKategori";
 
 export default class ExamplePage extends Component {
   render() {
-    const settings = {
-      dots: true,
-      // infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-    };
     return (
-      <div className="container">
-        <ExampleComp></ExampleComp>
-        <h1>Example Page</h1>
+      <div className="section-example">
+        <div className="container">
+          <ListKategori data={Data.kategori} />
+        </div>
       </div>
     );
   }
