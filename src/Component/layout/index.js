@@ -8,7 +8,9 @@ export default function index(props) {
   const { Header, Footer, Content } = Layout;
   return (
     <Layout>
-      <Header className="header"></Header>
+      <Header className="header">
+        <Navbar />
+      </Header>
       <Content>{props.children}</Content>
       <Footer></Footer>
     </Layout>

@@ -3,20 +3,10 @@ import "./index.scss";
 import { Carousel, Row, Col } from "antd";
 import { Link } from "react-router-dom";
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 // Component
 import Card from "Component/card";
 
 export default function index() {
-  const settings = {
-    dots: true,
-    // infinite: true,
-    slideToShow: 4,
-    slideToScroll: 4,
-  };
   return (
     <div className="section">
       <div className="container list-rekomendasi">
@@ -31,7 +21,7 @@ export default function index() {
           <Link className="btn btn-kategori-item">Career Ready Program</Link>
         </div>
         <Row>
-          <Carousel slidesToShow={4} slidesToScroll={1} infinite>
+          <Carousel slidesToScroll={1} slidesToShow={4} dots={false}>
             <Col span={6} className="gutter-row">
               <Card />
             </Col>

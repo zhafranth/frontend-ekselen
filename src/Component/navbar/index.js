@@ -7,63 +7,24 @@ import Logo from "Assets/Images/logo.png";
 
 export default function index() {
   return (
-    <>
-      <nav className="navbar navbar-expand-lg">
-        <div className="container">
-          <Link className="btn btn-logo" to="/">
-            <img src={Logo} alt="" />
-          </Link>
-          <div className="navbar-collapse">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link className="btn nav-link" type="Link">
-                  Course Category
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="btn nav-link" type="Link">
-                  Career Ready Program
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="btn nav-link" type="Link">
-                  About
-                </Link>
-              </li>
-            </ul>
-            <form className="form-inline my-2 my-lg-0">
-              <input
-                className="form-control mr-sm-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-                style={{
-                  borderRadius: "40px",
-                  height: "30px",
-                  margin: "0 10px",
-                }}
-              />
-            </form>
-            <div className="navbar-collapse">
-              <ul className="navbar-nav mr-auto">
-                <li className="nav-item">
-                  <Link className="btn nav-link btn-login-navbar" to="/login">
-                    Join
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    className="btn nav-link btn-register-navbar"
-                    to="/register"
-                  >
-                    Register
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </>
+    <div className="nav-collapse">
+      <div className="logo-btn">
+        <Link to="/">
+          <img src={Logo} alt="" />
+        </Link>
+      </div>
+      <div className="navbar-btn">
+        <Link className="navbar-btn-item">Category Course</Link>
+        <Link className="navbar-btn-item">Career Category Program</Link>
+        <Link className="navbar-btn-item">About</Link>
+      </div>
+      <div className="navbar-search">
+        <input type="text" className="search-nav" placeholder="search" />
+      </div>
+      <div className="navbar-register">
+        <Link className="btn-login">Login</Link>
+        <Link className="btn-register">Register</Link>
+      </div>
+    </div>
   );
 }

@@ -7,6 +7,7 @@ import Card from "Component/card";
 
 // Component Test
 import Jumbotron from "Component/jumbotron";
+import ExampleComp from "Component/example/example";
 
 export default class ExamplePage extends Component {
   render() {
@@ -18,12 +19,10 @@ export default class ExamplePage extends Component {
       slidesToScroll: 1,
     };
     return (
-      <Slider {...settings}>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </Slider>
+      <div className="container">
+        <ExampleComp></ExampleComp>
+        <h1>Example Page</h1>
+      </div>
     );
   }
 }
