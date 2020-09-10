@@ -8,6 +8,8 @@ import Data from "JSON/landingPage.json";
 import Jumbotron from "Component/jumbotron";
 import ListRekomendasi from "Component/listRekomendasi";
 import ListKategori from "Component/listKategori";
+import ListBenefit from "Component/listBenefit";
+import PromoBanner from "Component/promoBanner";
 
 export default class HomePage extends Component {
   render() {
@@ -16,6 +18,8 @@ export default class HomePage extends Component {
         <Jumbotron />
         <ListRekomendasi />
         <ListKategori data={Data.kategori} />
+        <ListBenefit />
+        <PromoBanner />
       </Layout>
     );
   }
