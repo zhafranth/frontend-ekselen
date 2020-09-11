@@ -19,22 +19,10 @@ import ListKategori from "Component/listKategori";
 import ListBenefit from "Component/listBenefit";
 import PromoBanner from "Component/promoBanner";
 import CardTestimoni from "Component/testimonialCard";
+import ListTestimoniCard from "Component/listTestimoniCard";
 
 export default class ExamplePage extends Component {
   render() {
-    return (
-      <div className="section">
-        <div className="container">
-          <div className="row">
-            <div className="col-6">
-              <CardTestimoni />
-            </div>
-            <div className="col-6">
-              <CardTestimoni />
-            </div>
-          </div>
-        </div>
-      </div>
-    );
+    return <ListTestimoniCard data={Data.testimoni} />;
   }
 }

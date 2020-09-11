@@ -4,18 +4,18 @@ import "./index.scss";
 // img
 import ImgTestimoniUser from "Assets/Images/user-testimoni.png";
 
-export default function index() {
+export default function index(props) {
   return (
     <div className="card-testimoni">
       <div className="user-testimoni">
-        <img src={ImgTestimoniUser} alt="" />
+        <img src={props.img} alt="" />
         <div className="user-info-testimoni">
-          <h5>Dimas Dermawan</h5>
-          <p>Mahasiswa</p>
+          <h5>{props.nama}</h5>
+          <p>{props.role}</p>
         </div>
       </div>
       <div className="user-konten-testimoni">
-        <p>Materi yang disajikan sangat interaktif dan mudah untuk dipahami</p>
+        <p>{props.testimoni}</p>
       </div>
     </div>
   );

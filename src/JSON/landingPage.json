@@ -30,5 +30,28 @@
       "nama": "Enrichment",
       "icon": "/images/icon category/kategori-icon6.svg"
     }
+  ],
+  "testimoni": [
+    {
+      "id": "1",
+      "nama": "Dimas Dermawan",
+      "role": "Mahasiswa",
+      "testimoni": "Materi yang disajikan sangat interaktif dan mudah untuk dipahami",
+      "img": "./images/testimoni/user-testimoni.png"
+    },
+    {
+      "id": "2",
+      "nama": "Dimas Dermawan",
+      "role": "Mahasiswa",
+      "testimoni": "Materi yang disajikan sangat interaktif dan mudah untuk dipahami",
+      "img": "./images/testimoni/user-testimoni.png"
+    },
+    {
+      "id": "3",
+      "nama": "Dimas Dermawan",
+      "role": "Mahasiswa",
+      "testimoni": "Materi yang disajikan sangat interaktif dan mudah untuk dipahami",
+      "img": "./images/testimoni/user-testimoni.png"
+    }
   ]
 }

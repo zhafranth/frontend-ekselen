@@ -15,8 +15,10 @@ export default function index() {
         </h2>
         <div className="btn-kategori-a">
           <Link className=" btn-kategori-item">Kelas Populer</Link>
-          <Link className="btn-kategori-item btn-active">Kelas Terbaru</Link>
-          <Link className=" btn-kategori-item">Career Ready Program</Link>
+          <Link className="btn-kategori-item ">Kelas Terbaru</Link>
+          <Link className=" btn-kategori-item btn-active">
+            Career Ready Program
+          </Link>
         </div>
         <Carousel slidesToShow={4} slidesToScroll={1} autoplay dots={false}>
           <Card />

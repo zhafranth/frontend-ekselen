@@ -10,6 +10,7 @@ import ListRekomendasi from "Component/listRekomendasi";
 import ListKategori from "Component/listKategori";
 import ListBenefit from "Component/listBenefit";
 import PromoBanner from "Component/promoBanner";
+import ListTetsimoni from "Component/listTestimoniCard";
 
 export default class HomePage extends Component {
   render() {
@@ -20,6 +21,7 @@ export default class HomePage extends Component {
         <ListKategori data={Data.kategori} />
         <ListBenefit />
         <PromoBanner />
+        <ListTetsimoni data={Data.testimoni} />
       </Layout>
     );
   }
