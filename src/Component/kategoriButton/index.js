@@ -7,7 +7,7 @@ export default function index(props) {
   return (
     <Link className="btn-kategori" to={`/kategori/${props.slug}`}>
       <img src={props.icon} alt="icon image" className="icon-img" />{" "}
-      <p>{props.nama}</p>
+      <span>{props.nama}</span>
     </Link>
   );
 }

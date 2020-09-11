@@ -20,9 +20,10 @@ import ListBenefit from "Component/listBenefit";
 import PromoBanner from "Component/promoBanner";
 import CardTestimoni from "Component/testimonialCard";
 import ListTestimoniCard from "Component/listTestimoniCard";
+import Footer from "Component/footer";
 
 export default class ExamplePage extends Component {
   render() {
-    return <ListTestimoniCard data={Data.testimoni} />;
+    return <Footer />;
   }
 }

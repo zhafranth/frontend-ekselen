@@ -2,6 +2,7 @@ import React from "react";
 import { Layout, Menu } from "antd";
 import { Link } from "react-router-dom";
 import Navbar from "../navbar";
+import FooterC from "Component/footer";
 import "./layout.scss";
 
 export default function index(props) {
@@ -12,7 +13,9 @@ export default function index(props) {
         <Navbar />
       </Header>
       <Content>{props.children}</Content>
-      <Footer></Footer>
+      <Footer>
+        <FooterC />
+      </Footer>
     </Layout>
   );
 }
