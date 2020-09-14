@@ -22,8 +22,11 @@ import CardTestimoni from "Component/testimonialCard";
 import ListTestimoniCard from "Component/listTestimoniCard";
 import Footer from "Component/footer";
 
+import HeroKategori from "Component/heroKategori";
+import HeroDetail from "Component/heroDetail";
+
 export default class ExamplePage extends Component {
   render() {
-    return <Footer />;
+    return <HeroDetail />;
   }
 }
