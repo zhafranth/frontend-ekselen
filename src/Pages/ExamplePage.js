@@ -24,9 +24,17 @@ import Footer from "Component/footer";
 
 import HeroKategori from "Component/heroKategori";
 import HeroDetail from "Component/heroDetail";
+import KontenDetail from "Component/kontenKelasDetail";
+import ListRekomendasiDetail from "Component/listRekomendasiDetailKelas";
 
 export default class ExamplePage extends Component {
   render() {
-    return <HeroDetail />;
+    return (
+      <>
+        <HeroDetail />
+        <KontenDetail />
+        <ListRekomendasiDetail />
+      </>
+    );
   }
 }
