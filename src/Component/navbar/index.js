@@ -41,7 +41,9 @@ export default function index(props) {
           <Link className="navbar-btn-item">Career Category Program</Link>
         </div>
         <div className="navbar-btn-item">
-          <Link className="navbar-btn-item">About</Link>
+          <Link className="navbar-btn-item" to="/about-ekselen">
+            About
+          </Link>
         </div>
       </div>
       <div className="navbar-search">
