@@ -1,6 +1,9 @@
 import React from "react";
 import "./index.scss";
 import StarRatings from "react-star-ratings";
+import { Link } from "react-router-dom";
+
+import { AiFillHeart } from "react-icons/ai";
 
 // Image Card
 import ImgCard from "Assets/Images/card-image.png";
@@ -55,6 +58,28 @@ export default function index() {
           </div>
           <div>
             <h4 className="harga-diskon-kelas">Rp. 250.000</h4>
+          </div>
+        </div>
+      </div>
+      <div className="card-content-hover">
+        <div className="card-hover-item">
+          <h4 className="title-card-hover">Apa Yang Kamu Pelajari?</h4>
+          <ul className="list-card-hover">
+            <li className="list-card-hover-item">Belajar dasar figma</li>
+            <li className="list-card-hover-item">Membuat prototype aplikasi</li>
+            <li className="list-card-hover-item">Membangun wireframe</li>
+          </ul>
+          <div className="component-button-card-hover">
+            <Link className="btn-lihat-detail" to="/kelas-detail/test">
+              Lihat Detail
+            </Link>
+            <div className="button-card-hover">
+              <Link className="mulai-belajar">Mulai Belajar</Link>
+              <Link className="wishlist-btn">
+                {" "}
+                <AiFillHeart />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

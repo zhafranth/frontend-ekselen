@@ -1,12 +1,14 @@
 .card {
   border-radius: 20px !important;
   border: 1px solid #e4e4e4;
+  position: relative;
 }
 .card-product {
   width: 262px;
   padding: 0.8rem;
   // margin: 0 1rem;
   margin-bottom: 1.9rem;
+  overflow: hidden;
   .card-img-top {
     width: 100%;
     height: auto;
@@ -83,6 +85,82 @@
         font-size: 20px;
         font-weight: 700;
         margin: 0;
+      }
+    }
+  }
+
+  &:hover {
+    .card-content-hover {
+      display: block;
+    }
+  }
+  .card-content-hover {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1.6rem;
+    .card-hover-item {
+      // position: relative;
+      .title-card-hover {
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 2.3rem;
+      }
+      .list-card-hover {
+        padding-left: 1.7rem;
+        .list-card-hover-item {
+          font-size: 14px;
+          margin-bottom: 0.8rem;
+        }
+      }
+
+      .component-button-card-hover {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin-bottom: 1.3rem;
+        width: 100%;
+        text-align: center;
+        .btn-lihat-detail {
+          font-size: 12px;
+          text-decoration: none;
+          color: #2f3c80;
+          font-weight: 300;
+        }
+        .button-card-hover {
+          display: flex;
+          justify-content: center;
+          .mulai-belajar {
+            display: block;
+            background-color: #f4a81e;
+            width: 157px;
+            height: 45px;
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 700;
+            border-radius: 15px;
+            padding: 10px 5px;
+            margin-right: 5px;
+            text-decoration: none;
+            &:hover {
+              background-color: #ffbb3c;
+            }
+          }
+          .wishlist-btn {
+            padding: 10px 5px;
+            display: block;
+            background-color: #eeeeee;
+            width: 45px;
+            height: 45px;
+            border-radius: 15px;
+          }
+        }
       }
     }
   }

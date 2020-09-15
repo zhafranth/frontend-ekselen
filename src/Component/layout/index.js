@@ -5,12 +5,15 @@ import Navbar from "../navbar";
 import FooterC from "Component/footer";
 import "./layout.scss";
 
+// Data
+import Data from "JSON/landingPage.json";
+
 export default function index(props) {
   const { Header, Footer, Content } = Layout;
   return (
     <Layout>
       <Header className="header">
-        <Navbar />
+        <Navbar data={Data.kategori} />
       </Header>
       <Content>{props.children}</Content>
       <Footer>

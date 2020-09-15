@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Carousel, Row, Col } from "antd";
 import Card from "Component/card";
+import Layout from "Component/layout";
 
 // Data
 import Data from "JSON/landingPage.json";
@@ -13,28 +14,29 @@ import Jumbotron from "Component/jumbotron"; /**Done */
 import ExampleComp from "Component/example/example";
 import CategoryBtn from "Component/kategoriButton";
 import Navbar from "Component/navbar";
-import Layout from "Component/layout";
+import Layout1 from "Component/layout";
 import ListRekomendasi from "Component/listRekomendasi";
 import ListKategori from "Component/listKategori";
 import ListBenefit from "Component/listBenefit";
 import PromoBanner from "Component/promoBanner";
 import CardTestimoni from "Component/testimonialCard";
 import ListTestimoniCard from "Component/listTestimoniCard";
-import Footer from "Component/footer";
+import Footer1 from "Component/footer";
 
 import HeroKategori from "Component/heroKategori";
 import HeroDetail from "Component/heroDetail";
 import KontenDetail from "Component/kontenKelasDetail";
 import ListRekomendasiDetail from "Component/listRekomendasiDetailKelas";
 
+// const { Header, Content, Footer } = Layout;
 export default class ExamplePage extends Component {
   render() {
     return (
-      <>
-        <HeroDetail />
-        <KontenDetail />
-        <ListRekomendasiDetail />
-      </>
+      <div className="section-example">
+        <div className="container">
+          <Card />
+        </div>
+      </div>
     );
   }
 }
