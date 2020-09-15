@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.scss";
 import LogoFooter from "Assets/Images/logo.png";
 
@@ -7,7 +7,8 @@ import IconFacebook from "Assets/Images/icon-social1.svg";
 import IconInstagram from "Assets/Images/icon-social2.svg";
 import IconLinkedin from "Assets/Images/icon-social3.svg";
 
-export default function index() {
+export default function Index() {
+  const [isOpen, setIsopen] = useState("");
   return (
     <footer className="footer">
       <div className="container">

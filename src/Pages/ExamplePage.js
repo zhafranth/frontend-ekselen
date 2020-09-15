@@ -11,7 +11,6 @@ import Data from "JSON/landingPage.json";
 
 // Component Test
 import Jumbotron from "Component/jumbotron"; /**Done */
-import ExampleComp from "Component/example/example";
 import CategoryBtn from "Component/kategoriButton";
 import Navbar from "Component/navbar";
 import Layout1 from "Component/layout";
@@ -22,11 +21,14 @@ import PromoBanner from "Component/promoBanner";
 import CardTestimoni from "Component/testimonialCard";
 import ListTestimoniCard from "Component/listTestimoniCard";
 import Footer1 from "Component/footer";
+import ExampleComp from "Component/listMateri/ListMateri";
 
 import HeroKategori from "Component/heroKategori";
 import HeroDetail from "Component/heroDetail";
 import KontenDetail from "Component/kontenKelasDetail";
 import ListRekomendasiDetail from "Component/listRekomendasiDetailKelas";
+
+import Dummy from "JSON/dummy.json";
 
 // const { Header, Content, Footer } = Layout;
 export default class ExamplePage extends Component {
@@ -34,7 +36,7 @@ export default class ExamplePage extends Component {
     return (
       <div className="section-example">
         <div className="container">
-          <Card />
+          <ExampleComp data={Dummy.materi} />
         </div>
       </div>
     );

@@ -4,12 +4,6 @@ import { Link } from "react-router-dom";
 
 // Logo
 import Logo from "Assets/Images/logo.png";
-import IconKategori1 from "Assets/Images/kategori-icon1.svg";
-import IconKategori2 from "Assets/Images/kategori-icon2.svg";
-import IconKategori3 from "Assets/Images/kategori-icon3.svg";
-import IconKategori4 from "Assets/Images/kategori-icon4.svg";
-import IconKategori5 from "Assets/Images/kategori-icon5.svg";
-import IconKategori6 from "Assets/Images/kategori-icon6.svg";
 
 export default function index(props) {
   return (
@@ -38,7 +32,9 @@ export default function index(props) {
           </ul>
         </div>
         <div className="navbar-btn-item">
-          <Link className="navbar-btn-item">Career Category Program</Link>
+          <Link className="navbar-btn-item" to="/kategori/career-ready-program">
+            Career Category Program
+          </Link>
         </div>
         <div className="navbar-btn-item">
           <Link className="navbar-btn-item" to="/about-ekselen">

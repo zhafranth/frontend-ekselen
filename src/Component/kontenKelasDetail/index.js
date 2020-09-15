@@ -1,5 +1,9 @@
 import React from "react";
 import "./index.scss";
+import ListMateri from "Component/listMateri/ListMateri";
+
+// Data
+import Dummy from "JSON/dummy.json";
 
 // Image
 import ImgProfilReview from "Assets/Images/review-img.png";
@@ -40,17 +44,7 @@ export default function index() {
                   Materi <span>Kelas</span>
                 </h3>
                 <div className="border-title"></div>
-                <div className="list-kelas">
-                  <button className="btn btn-materi-kelas" type="button">
-                    Pendahuluan
-                  </button>
-                  <button className="btn btn-materi-kelas" type="button">
-                    Materi II
-                  </button>
-                  <button className="btn btn-materi-kelas" type="button">
-                    Materi III
-                  </button>
-                </div>
+                <ListMateri data={Dummy.materi} />
               </div>
               <div className="review-kelas">
                 <h3 className="title-detail-kelas">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.scss";
 import StarRatings from "react-star-ratings";
 import { Link } from "react-router-dom";
@@ -11,7 +11,8 @@ import ImgCardPhoto from "Assets/Images/card-foto.png";
 import StackLessonIcon from "Assets/Images/icon-card-kelas.png";
 import ClockIcon from "Assets/Images/icon2-card-kelas.png";
 
-export default function index() {
+export default function Index() {
+  const [isOpen, setIsOpen] = useState(true);
   return (
     <div className="card card-product">
       <img className="card-img-top" src={ImgCard} alt="Card image cap" />
