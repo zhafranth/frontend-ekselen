@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 // Component
 import Card from "Component/card";
 
-export default function index() {
+export default function index(props) {
   return (
     <div className="section">
       <div className="container list-rekomendasi">
@@ -20,12 +20,26 @@ export default function index() {
             Career Ready Program
           </Link>
         </div>
-        <Carousel slidesToShow={4} slidesToScroll={1} autoplay dots={false}>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+        <Carousel slidesToScroll={1} slidesToShow={4} autoplay dots={false}>
+          {props.data.map((item, i) => {
+            return (
+              <Card
+                key={`kelas-${i}`}
+                judul={item.judul}
+                instrukturPhoto={item.instruktur.photo}
+                instrukturNama={item.instruktur.nama}
+                instrukturRole={item.instruktur.role}
+                rate={item.rate}
+                jumMateri={item.totalMateri}
+                jumJam={item.totalJam}
+                harga={item.harga}
+                diskon={item.diskon}
+                benefit={item.benefit}
+                cover={item.imgCover}
+                kategori={item.kategori}
+              />
+            );
+          })}
         </Carousel>
       </div>
     </div>

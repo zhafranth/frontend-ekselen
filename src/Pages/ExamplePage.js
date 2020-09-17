@@ -8,6 +8,7 @@ import Layout from "Component/layout";
 
 // Data
 import Data from "JSON/landingPage.json";
+import DataKelas from "JSON/kelas.json";
 
 // Component Test
 import Jumbotron from "Component/jumbotron"; /**Done */
@@ -34,9 +35,32 @@ import Dummy from "JSON/dummy.json";
 export default class ExamplePage extends Component {
   render() {
     return (
-      <div className="section-example">
+      <div className="section">
         <div className="container">
-          <ExampleComp data={Dummy.materi} />
+          <div className="row">
+            {DataKelas.kelas.map((item, i) => {
+              console.log(item.img);
+              return (
+                <div className="col-3" key={`col-card-${i}`}>
+                  <Card
+                    key={`kelas-${i}`}
+                    judul={item.judul}
+                    instrukturPhoto={item.instruktur.photo}
+                    instrukturNama={item.instruktur.nama}
+                    instrukturRole={item.instruktur.role}
+                    rate={item.rate}
+                    jumMateri={item.totalMateri}
+                    jumJam={item.totalJam}
+                    harga={item.harga}
+                    diskon={item.diskon}
+                    benefit={item.benefit}
+                    cover={item.imgCover}
+                    kategori={item.kategori}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );

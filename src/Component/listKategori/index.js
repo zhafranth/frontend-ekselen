@@ -5,7 +5,6 @@ import "./index.scss";
 import { Kategori } from "Pages";
 
 export default function index(props) {
-  console.log(props.data);
   return (
     <div className="section">
       <div className="container list-kategori">

@@ -3,6 +3,7 @@ import Layout from "Component/layout/index";
 
 // Data
 import Data from "JSON/landingPage.json";
+import DataKelas from "JSON/kelas.json";
 
 // Component
 import Jumbotron from "Component/jumbotron";
@@ -17,7 +18,7 @@ export default class HomePage extends Component {
     return (
       <Layout>
         <Jumbotron />
-        <ListRekomendasi />
+        <ListRekomendasi data={DataKelas.kelas} />
         <ListKategori data={Data.kategori} />
         <ListBenefit />
         <PromoBanner />
