@@ -10,21 +10,33 @@ import Data from "JSON/landingPage.json";
 
 import { Link } from "react-router-dom";
 
-export default class KategoriPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      slug: this.props.match.params.slugId,
-    };
-  }
+import { connect } from "react-redux";
+
+class KategoriPage extends Component {
+  state = {
+    slugId: this.props.match.params.slugKategori,
+  };
+  getProduct = (slug) => {
+    if (slug === "") {
+      const newData = DataKelas.kelas.filter(
+        (item) => item.kategori === this.state.slugId
+      );
+      return newData;
+    } else {
+      const newData = DataKelas.kelas.filter((item) => item.kategori === slug);
+      return newData;
+    }
+  };
   render() {
-    console.log(this.state.slug);
+    const { kategoriAktif } = this.props;
+    const kelas = this.getProduct(kategoriAktif);
+    console.log(this.state.slugId);
     return (
       <Layout>
         <HeroKategori />
         <div className="container mb-5">
           <div className="row">
-            {DataKelas.kelas.map((item, i) => {
+            {kelas.map((item, i) => {
               return (
                 <div className="col-3" key={`col-rek-${i}`}>
                   <Card
@@ -41,16 +53,22 @@ export default class KategoriPage extends Component {
                     benefit={item.benefit}
                     cover={item.imgCover}
                     kategori={item.kategori}
+                    slug={item.slug}
                   />
                 </div>
               );
             })}
           </div>
-          <Link to={`/kategori/contoh`}>Contoh</Link>
         </div>
-        <PromoBanner />
-        <ListCategory data={Data.kategori} />
       </Layout>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    kategoriAktif: state.kategoriReducer.kategoriAktif,
+  };
+};
+
+export default connect(mapStateToProps, null)(KategoriPage);

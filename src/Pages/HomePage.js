@@ -7,7 +7,7 @@ import DataKelas from "JSON/kelas.json";
 
 // Component
 import Jumbotron from "Component/jumbotron";
-import ListRekomendasi from "Component/listRekomendasi";
+import ListRekomendasi from "Component/listRekomendasi/ListRekomendasi";
 import ListKategori from "Component/listKategori";
 import ListBenefit from "Component/listBenefit";
 import PromoBanner from "Component/promoBanner";

@@ -1,4 +1,5 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "./index.scss";
 import StarRatings from "react-star-ratings";
 import { Link } from "react-router-dom";
@@ -6,12 +7,17 @@ import { Link } from "react-router-dom";
 import { AiFillHeart } from "react-icons/ai";
 
 // Image Card
-import ImgCard from "Assets/Images/card-image.png";
-import ImgCardPhoto from "Assets/Images/card-foto.png";
 import StackLessonIcon from "Assets/Images/icon-card-kelas.png";
 import ClockIcon from "Assets/Images/icon2-card-kelas.png";
 
 export default function Index(props) {
+  const dispatch = useDispatch();
+  const setSlugKelas = (slugKelas) => {
+    dispatch({
+      type: "SET_SLUG_KELAS",
+      payload: slugKelas,
+    });
+  };
   return (
     <div className="card card-product">
       <img className="card-img-top" src={props.cover} alt="Card image cap" />
@@ -74,7 +80,11 @@ export default function Index(props) {
             })}
           </ul>
           <div className="component-button-card-hover">
-            <Link className="btn-lihat-detail" to="/kelas-detail/test">
+            <Link
+              className="btn-lihat-detail"
+              to={`/kelas-detail/${props.slug}`}
+              onClick={() => setSlugKelas(props.slug)}
+            >
               Lihat Detail
             </Link>
             <div className="button-card-hover">

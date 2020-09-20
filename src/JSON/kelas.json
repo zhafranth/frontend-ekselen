@@ -4,7 +4,6 @@
       "id": 1,
       "slug": "sukses-bisnis-online-shop",
       "judul": "Sukses Bisnis Online Shop di Instagram",
-      "kategori": "Marketing",
       "imgCover": "../images/cover card/cover1.jpg",
       "instruktur": {
         "nama": "Micheal Sugiharto",
@@ -20,13 +19,16 @@
         "Dasar Instagram",
         "Target market pasar",
         "Cara memesarkan produk"
-      ]
+      ],
+      "kelasPopuler": true,
+      "kelasTerbaru": false,
+      "careerReady": true,
+      "kategori": "manajemen-wirausa"
     },
     {
       "id": 2,
       "slug": "mudah-pahami-konten-marketing",
       "judul": "Mudah Pahami Konten Marketing untuk Bisnis",
-      "kategori": "manajemen dan wirusaha",
       "imgCover": "../images/cover card/cover3.jpg",
       "instruktur": {
         "nama": "Astri Soeparyono",
@@ -42,13 +44,16 @@
         "Dasar Instagram",
         "Target market pasar",
         "Cara memesarkan produk"
-      ]
+      ],
+      "kelasPopuler": false,
+      "kelasTerbaru": true,
+      "careerReady": false,
+      "kategori": "manajemen-wirausa"
     },
     {
       "id": 3,
       "slug": "mastering-mobile-programming-android",
       "judul": "Mastering Mobile Programming Android",
-      "kategori": "teknik",
       "imgCover": "../images/cover card/cover2.jpg",
       "instruktur": {
         "nama": "Budi Oktaviyan",
@@ -64,13 +69,16 @@
         "Dasar Instagram",
         "Target market pasar",
         "Cara memesarkan produk"
-      ]
+      ],
+      "kelasPopuler": true,
+      "kelasTerbaru": false,
+      "careerReady": false,
+      "kategori": "teknologi"
     },
     {
       "id": 4,
       "slug": "siap-kerja-di-kedai-kopi",
       "judul": "Siap Kerja di Kedai Kopi: Belajar Bikin Kopi Kekinia ala Barita",
-      "kategori": "teknik",
       "imgCover": "../images/cover card/cover4.jpg",
       "instruktur": {
         "nama": "Djoko Pamungkas",
@@ -86,13 +94,16 @@
         "Dasar Instagram",
         "Target market pasar",
         "Cara memesarkan produk"
-      ]
+      ],
+      "kelasPopuler": false,
+      "kelasTerbaru": true,
+      "careerReady": true,
+      "kategori": "teknologi"
     },
     {
       "id": 5,
       "slug": "pelajari-dasar-bahasa-inggris",
       "judul": "Pelajari Dasar Bahasa Inggris untuk Pemula",
-      "kategori": "teknik",
       "imgCover": "../images/cover card/cover5.jpg",
       "instruktur": {
         "nama": "Ali Fikri",
@@ -108,13 +119,16 @@
         "Dasar Instagram",
         "Target market pasar",
         "Cara memesarkan produk"
-      ]
+      ],
+      "kelasPopuler": true,
+      "kelasTerbaru": false,
+      "careerReady": true,
+      "kategori": "teknik"
     },
     {
       "id": 6,
       "slug": "belajar-desain-grafis",
       "judul": "Belajar Desain Grafis dengan Mudah Menggunakan Adobe Photosop",
-      "kategori": "teknik",
       "imgCover": "../images/cover card/cover6.jpg",
       "instruktur": {
         "nama": "Bimo Saktio Mukti",
@@ -130,13 +144,16 @@
         "Dasar Instagram",
         "Target market pasar",
         "Cara memesarkan produk"
-      ]
+      ],
+      "kelasPopuler": false,
+      "kelasTerbaru": true,
+      "careerReady": false,
+      "kategori": "teknik"
     },
     {
       "id": 7,
       "slug": "ielts-lesson-for-getting-higher-score",
       "judul": "IELTS Lesson for Getting Higher Score",
-      "kategori": "teknik",
       "imgCover": "../images/cover card/cover7.jpg",
       "instruktur": {
         "nama": "Alexandria Tjia",
@@ -152,13 +169,16 @@
         "Dasar Instagram",
         "Target market pasar",
         "Cara memesarkan produk"
-      ]
+      ],
+      "kelasPopuler": true,
+      "kelasTerbaru": false,
+      "careerReady": false,
+      "kategori": "pengembangan-diri"
     },
     {
       "id": 8,
       "slug": "cara-membuat-website",
       "judul": "SEO 101: Cara Membuat Website Eksis di Halaman Depan Google",
-      "kategori": "teknik",
       "imgCover": "../images/cover card/cover8.jpg",
       "instruktur": {
         "nama": "Imam Akbar",
@@ -174,13 +194,16 @@
         "Dasar Instagram",
         "Target market pasar",
         "Cara memesarkan produk"
-      ]
+      ],
+      "kelasPopuler": false,
+      "kelasTerbaru": true,
+      "careerReady": true,
+      "kategori": "pengembangan-diri"
     },
     {
       "id": 9,
       "slug": "membuat-tipografi",
       "judul": "Membuat Tipografi dalam Adobe Illustrator",
-      "kategori": "teknik",
       "imgCover": "../images/cover card/cover9.jpg",
       "instruktur": {
         "nama": "Edi Sarwoon",
@@ -196,13 +219,16 @@
         "Dasar Instagram",
         "Target market pasar",
         "Cara memesarkan produk"
-      ]
+      ],
+      "kelasPopuler": true,
+      "kelasTerbaru": false,
+      "careerReady": true,
+      "kategori": "sales-marketing"
     },
     {
       "id": 10,
       "slug": "belajar-ngaji",
       "judul": "Belajar Mengaji agar Fasih Baca Al Quran",
-      "kategori": "teknik",
       "imgCover": "../images/cover card/cover10.jpg",
       "instruktur": {
         "nama": "Rio Sastra Hardiansyah",
@@ -218,7 +244,11 @@
         "Dasar Instagram",
         "Target market pasar",
         "Cara memesarkan produk"
-      ]
+      ],
+      "kelasPopuler": false,
+      "kelasTerbaru": true,
+      "careerReady": false,
+      "kategori": "enrichment"
     }
   ]
 }

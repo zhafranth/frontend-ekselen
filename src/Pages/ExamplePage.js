@@ -15,7 +15,7 @@ import Jumbotron from "Component/jumbotron"; /**Done */
 import CategoryBtn from "Component/kategoriButton";
 import Navbar from "Component/navbar";
 import Layout1 from "Component/layout";
-import ListRekomendasi from "Component/listRekomendasi";
+import ListRekomendasi from "Component/listRekomendasi/ListRekomendasi";
 import ListKategori from "Component/listKategori";
 import ListBenefit from "Component/listBenefit";
 import PromoBanner from "Component/promoBanner";
@@ -30,14 +30,14 @@ import KontenDetail from "Component/kontenKelasDetail";
 import ListRekomendasiDetail from "Component/listRekomendasiDetailKelas";
 
 import Dummy from "JSON/dummy.json";
-
+import Kelas from "JSON/kelas.json";
 // const { Header, Content, Footer } = Layout;
 export default class ExamplePage extends Component {
   render() {
     return (
       <div className="section">
-        <div className="container">
-          <div className="row">
+        <div className="container mt-5">
+          {/* <div className="row">
             {DataKelas.kelas.map((item, i) => {
               console.log(item.img);
               return (
@@ -60,7 +60,8 @@ export default class ExamplePage extends Component {
                 </div>
               );
             })}
-          </div>
+          </div> */}
+          <ListRekomendasi data={Kelas.kelas} />
         </div>
       </div>
     );

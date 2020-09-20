@@ -6,7 +6,8 @@ import StarRatings from "react-star-ratings";
 import ImgInstruktur from "Assets/Images/instruktur-profile-hero-detail.png";
 import VideoOverview from "Assets/Images/video-overview.png";
 
-export default function index() {
+export default function index(props) {
+  console.log(props.judul);
   return (
     <div className="section hero-detail">
       <div className="container">
@@ -26,7 +27,7 @@ export default function index() {
         <div className="row justify-content-between">
           <div className="col">
             <div className="konten-hero-detail">
-              <h3>Practice For Great UI Design</h3>
+              <h3>{props.judul}</h3>
               <p>
                 Tingkatkan potensi penjualan dengan User Interface yang lebih
                 menarik user.
@@ -35,23 +36,30 @@ export default function index() {
                 <div className="col-3 star-kelas">
                   <StarRatings
                     numberOfStars={5}
-                    rating={4}
+                    rating={props.rate}
                     starRatedColor="#FFCC47"
                     starDimension="20px"
                     starSpacing="2px"
                   />
                 </div>
                 <div className="col">
-                  <h5>Marketing</h5>
+                  <h5>{props.kategori}</h5>
                 </div>
               </div>
-              <div className="row instruktur-profil-detail-hero">
-                <div className="col-1">
-                  <img src={ImgInstruktur} alt="" />
+              <div className="row instruktur-profil-detail-hero ">
+                <div className="col-1 pr-0 mr-5">
+                  <img
+                    src={props.instrukturImg}
+                    alt=""
+                    className="instruktur-profil-detail-hero-img"
+                  />
                 </div>
-                <div className="col">
-                  <h4>John Doe</h4>
-                  <p>Product Designer at Ekselen.id</p>
+                <div
+                  className="col justify-content-center d-flex pl-0"
+                  style={{ flexDirection: "column" }}
+                >
+                  <h4>{props.instrukturName}</h4>
+                  <p>{props.instrukturRole}</p>
                 </div>
               </div>
             </div>

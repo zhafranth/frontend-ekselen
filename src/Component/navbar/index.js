@@ -1,11 +1,17 @@
 import React from "react";
 import "./navbar.scss";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { setKategori } from "Store/Action/kategoriAction";
 
 // Logo
 import Logo from "Assets/Images/logo.png";
 
-export default function index(props) {
+function Navbar(props) {
+  const handleClickKategori = (idSlug) => {
+    props.setKategori(idSlug);
+  };
+  // console.log(kategoriSlug);
   return (
     <div className="nav-collapse container">
       <div className="logo-btn">
@@ -23,6 +29,7 @@ export default function index(props) {
                   <Link
                     className="list-kategori-link"
                     to={`/kategori/${item.id}`}
+                    onClick={() => handleClickKategori(item.id)}
                   >
                     <img src={item.icon} alt="" /> {item.nama}
                   </Link>
@@ -52,3 +59,15 @@ export default function index(props) {
     </div>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    kategoriAktif: state.kategoriReducer.kategoriAktif,
+  };
+};
+
+const mapStateToDispatch = {
+  setKategori,
+};
+
+export default connect(mapStateToProps, mapStateToDispatch)(Navbar);

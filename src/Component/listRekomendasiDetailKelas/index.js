@@ -1,9 +1,10 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "./index.scss";
 import { Carousel } from "antd";
 import Card from "Component/card";
 
-export default function index(props) {
+export default function ListRekomendasiDetailKelas(props) {
   return (
     <div className="section">
       <div className="container">
@@ -28,6 +29,7 @@ export default function index(props) {
                 benefit={item.benefit}
                 cover={item.imgCover}
                 kategori={item.kategori}
+                slug={item.slug}
               />
             );
           })}

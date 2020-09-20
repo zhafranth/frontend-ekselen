@@ -9,16 +9,11 @@ export default function ListMateri(props) {
 
   const handleShowList = (id) => {
     if (idList === id) {
-      if (isOpen) {
-        setIsOpen(false);
-      } else {
-        setIsOpen(true);
-      }
-      setIdList(id);
+      setIsOpen(!isOpen);
     } else {
-      setIdList(id);
       setIsOpen(true);
     }
+    setIdList(id);
   };
 
   const showSubBab = (idSub) => {
