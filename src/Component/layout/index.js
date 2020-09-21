@@ -10,6 +10,16 @@ import Data from "JSON/landingPage.json";
 
 export default function index(props) {
   const { Header, Footer, Content } = Layout;
+  if (props.isLoginPage) {
+    return (
+      <Layout>
+        <Header className="header">
+          <Navbar data={Data.kategori} />
+        </Header>
+        <Content>{props.children}</Content>
+      </Layout>
+    );
+  }
   return (
     <Layout>
       <Header className="header">

@@ -53,7 +53,9 @@ function Navbar(props) {
         <input type="text" className="search-nav" placeholder="search" />
       </div>
       <div className="navbar-register">
-        <Link className="btn-login">Login</Link>
+        <Link className="btn-login" to="/login">
+          Login
+        </Link>
         <Link className="btn-register">Register</Link>
       </div>
     </div>

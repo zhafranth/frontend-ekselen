@@ -99,6 +99,7 @@ export default function ListRekomendasi({ data }) {
                     benefit={itemKelas.benefit}
                     cover={itemKelas.imgCover}
                     kategori={itemKelas.kategori}
+                    slug={itemKelas.slug}
                   />
                 );
               })}
