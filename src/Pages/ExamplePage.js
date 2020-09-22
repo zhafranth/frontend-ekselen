@@ -34,36 +34,6 @@ import Kelas from "JSON/kelas.json";
 // const { Header, Content, Footer } = Layout;
 export default class ExamplePage extends Component {
   render() {
-    return (
-      <div className="section">
-        <div className="container mt-5">
-          {/* <div className="row">
-            {DataKelas.kelas.map((item, i) => {
-              console.log(item.img);
-              return (
-                <div className="col-3" key={`col-card-${i}`}>
-                  <Card
-                    key={`kelas-${i}`}
-                    judul={item.judul}
-                    instrukturPhoto={item.instruktur.photo}
-                    instrukturNama={item.instruktur.nama}
-                    instrukturRole={item.instruktur.role}
-                    rate={item.rate}
-                    jumMateri={item.totalMateri}
-                    jumJam={item.totalJam}
-                    harga={item.harga}
-                    diskon={item.diskon}
-                    benefit={item.benefit}
-                    cover={item.imgCover}
-                    kategori={item.kategori}
-                  />
-                </div>
-              );
-            })}
-          </div> */}
-          <ListRekomendasi data={Kelas.kelas} />
-        </div>
-      </div>
-    );
+    return <Navbar isMateriPage />;
   }
 }

@@ -95,3 +95,21 @@
     }
   }
 }
+
+.nav-collapse-materi-page {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  .title-navbar {
+    align-self: center;
+  }
+  .logo-btn {
+    position: absolute;
+    top: 25px;
+    left: 50px;
+    // margin: auto;
+  }
+}

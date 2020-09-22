@@ -12,6 +12,20 @@ function Navbar(props) {
     props.setKategori(idSlug);
   };
   // console.log(kategoriSlug);
+  if (props.isMateriPage) {
+    return (
+      <header className="header">
+        <div className="nav-collapse-materi-page">
+          <div className="logo-btn">
+            <Link to="/">
+              <img src={Logo} alt="" />
+            </Link>
+          </div>
+          <h3 className="title-navbar">Practice for Great UI Design</h3>
+        </div>
+      </header>
+    );
+  }
   return (
     <div className="nav-collapse container">
       <div className="logo-btn">
@@ -21,7 +35,7 @@ function Navbar(props) {
       </div>
       <div className="navbar-btn">
         <div className="navbar-btn-item item-btn-toogle">
-          <Link className="navbar-btn-hover">Course Category</Link>
+          <a className="navbar-btn-hover">Course Category</a>
           <ul className="list-kategori-nav">
             {props.data.map((item, i) => {
               return (
@@ -56,7 +70,9 @@ function Navbar(props) {
         <Link className="btn-login" to="/login">
           Login
         </Link>
-        <Link className="btn-register">Register</Link>
+        <Link className="btn-register" to="/register">
+          Register
+        </Link>
       </div>
     </div>
   );

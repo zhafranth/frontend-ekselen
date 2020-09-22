@@ -15,7 +15,7 @@ export default function index(props) {
           <div className="row">
             {props.data.map((item, index) => {
               return (
-                <div className="col-2">
+                <div className="col-2" key={`kategori-${index}`}>
                   <KategoriBtn
                     icon={item.icon}
                     nama={item.nama}

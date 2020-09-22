@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Layout from "Component/layout/index";
 import Logo from "Assets/Images/logo.png";
+import { Link } from "react-router-dom";
 
 export default class LoginPage extends Component {
   render() {
@@ -8,7 +9,7 @@ export default class LoginPage extends Component {
       <Layout isLoginPage>
         <div className="section-login-register">
           <div className="card-login">
-            <div className="row">
+            <div className="row row-login">
               <div className="col-5">
                 <div className="side-backdrop">
                   <h5>
@@ -58,11 +59,16 @@ export default class LoginPage extends Component {
                       </div>
                     </form>
                   </div>
-                  <button className="btn btn-login-submit">Masuk</button>
-                  <p className="text-center my-3" style={{ fontSize: "12px" }}>
+                  <Link
+                    className="btn btn-login-submit"
+                    to="/kelas-saya/progress/semua-kelas"
+                  >
+                    Masuk
+                  </Link>
+                  {/* <p className="text-center my-1" style={{ fontSize: "12px" }}>
                     Atau masuk dengan
                   </p>
-                  <div className="row justify-content-center mb-4">
+                  <div className="row justify-content-center mb-2">
                     <div className="col">
                       <button className="btn btn-login-facebook">
                         Facebook
@@ -71,10 +77,10 @@ export default class LoginPage extends Component {
                     <div className="col">
                       <button className="btn btn-login-google">Google</button>
                     </div>
-                  </div>
+                  </div> */}
                   <p
                     className="text-center"
-                    style={{ fontSize: "12px", fontWeight: "300" }}
+                    style={{ fontSize: "12px", fontWeight: "300", margin: 0 }}
                   >
                     Belum memiliki akun? Silahkan
                     <button

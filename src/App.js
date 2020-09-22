@@ -9,6 +9,8 @@ import {
   Register,
   Example,
   About,
+  KelasSaya,
+  MateriKelas,
 } from "Pages";
 
 // Style Global
@@ -32,6 +34,11 @@ function App() {
         <Route path="/login" component={Login}></Route>
         <Route path="/register" component={Register}></Route>
         <Route path="/about-ekselen" component={About}></Route>
+        <Route path="/kelas-saya/:slugKelas" component={KelasSaya}></Route>
+        <Route
+          path="/materi/:slugKelas/:slugMateri"
+          component={MateriKelas}
+        ></Route>
         <Route path="/example" component={Example}></Route>
         <Route component={Error}></Route>
       </Switch>
