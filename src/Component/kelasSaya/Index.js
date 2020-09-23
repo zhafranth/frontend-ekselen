@@ -2,6 +2,8 @@ import React from "react";
 import { Route, Switch, NavLink } from "react-router-dom";
 import "./index.scss";
 
+import CardProgressKelas from "./CardProgressKelas";
+
 export default function KelasSaya(props) {
   return (
     <div className="section">
@@ -32,7 +34,7 @@ export default function KelasSaya(props) {
           </div>
           <Switch>
             <Route path="/kelas-saya/progress/semua-kelas">
-              <h1>ini semua kelas</h1>
+              <CardProgressKelas />
             </Route>
             <Route path="/kelas-saya/progress/progress-kelas">
               <h1>ini semua progress</h1>
