@@ -4,3 +4,10 @@ export const setMateriSlug = (slugMateri) => {
     payload: slugMateri,
   };
 };
+
+export const setTypeMateri = (typeMateri) => {
+  return {
+    type: "SET_TYPE_MATERI",
+    payload: typeMateri,
+  };
+};

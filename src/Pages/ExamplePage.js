@@ -23,6 +23,7 @@ import CardTestimoni from "Component/testimonialCard";
 import ListTestimoniCard from "Component/listTestimoniCard";
 import Footer1 from "Component/footer";
 import ExampleComp from "Component/listMateri/ListMateri";
+import Kuis from "Component/kuis/Kuis";
 
 import HeroKategori from "Component/heroKategori";
 import HeroDetail from "Component/heroDetail";
@@ -34,6 +35,12 @@ import Kelas from "JSON/kelas.json";
 // const { Header, Content, Footer } = Layout;
 export default class ExamplePage extends Component {
   render() {
-    return <Navbar isMateriPage />;
+    return (
+      <div className="section-example">
+        <div className="container">
+          <Kuis />
+        </div>
+      </div>
+    );
   }
 }

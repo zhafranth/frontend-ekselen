@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./index.scss";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { connect } from "react-redux";
+import { setTypeMateri } from "Store/Action/materiAction";
 
-export default function SidebarBtn(props) {
+function SidebarBtn(props) {
   const [idButton, setIdButton] = useState("");
   const { slugKelas } = useParams();
 
@@ -11,9 +12,11 @@ export default function SidebarBtn(props) {
     return setIdButton(idButton === "" ? "sidebar-isopen" : "");
   };
 
-  const { title, materi } = props;
+  const handleType = (typeMateri) => {
+    props.setTypeMateri(typeMateri);
+  };
 
-  console.log(slugKelas);
+  const { title, materi } = props;
   return (
     <div className="sidebar-bab">
       <button className="sidebar-bab-btn" type="button" onClick={handleClikId}>
@@ -26,6 +29,7 @@ export default function SidebarBtn(props) {
               <Link
                 className="sidebar-subbab-link"
                 to={`/materi/${slugKelas}/${item.slugMateriKelas}`}
+                onClick={() => handleType(item.type)}
               >
                 {item.titleSubBab}
               </Link>
@@ -36,3 +40,9 @@ export default function SidebarBtn(props) {
     </div>
   );
 }
+
+const mapDispatchToProps = {
+  setTypeMateri,
+};
+
+export default connect(null, mapDispatchToProps)(SidebarBtn);
