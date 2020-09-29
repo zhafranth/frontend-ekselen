@@ -4,6 +4,9 @@ import { NavLink, Route, Switch } from "react-router-dom";
 import KelasSaya from "Component/kelasSaya/Index";
 import Pembelian from "Component/pembelian/Index";
 
+// Data
+import DataKelas from "JSON/kelasSaya.json";
+
 export default class KelasSayaPage extends Component {
   state = {
     slug: "progress",
@@ -17,7 +20,9 @@ export default class KelasSayaPage extends Component {
       ? "btn-navbar-kelas btn-navbar-kelas-active"
       : "btn-navbar-kelas";
   };
+
   render() {
+    const data = Object.assign({}, ...DataKelas.kelas);
     return (
       <Layout isLoginPage>
         <div className="section">
@@ -43,7 +48,7 @@ export default class KelasSayaPage extends Component {
             <Route
               exact
               path="/kelas-saya/progress/:slugProgress"
-              component={KelasSaya}
+              component={() => <KelasSaya data={data} />}
             ></Route>
             <Route
               path="/kelas-saya/pembelian/:slugPembelian"

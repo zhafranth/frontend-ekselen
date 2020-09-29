@@ -1,0 +1,24 @@
+{
+  "kelas": [
+    {
+      "id": 1,
+      "judul": "Practice for Great UI Design",
+      "slug": "practice-for-great-ui",
+      "progress": 50,
+      "totalKuis": 5,
+      "totalVideo": 10,
+      "bab": [
+        {
+          "titleBab": "Pendahuluan",
+          "materi": [
+            {
+              "type": "video",
+              "slugMateriKelas": "materi-1",
+              "titleSubBab": "Pengenalan ReactJS"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -34,7 +34,7 @@ export default function KelasSaya(props) {
           </div>
           <Switch>
             <Route path="/kelas-saya/progress/semua-kelas">
-              <CardProgressKelas />
+              <CardProgressKelas data={props.data} />
             </Route>
             <Route path="/kelas-saya/progress/progress-kelas">
               <h1>ini semua progress</h1>
