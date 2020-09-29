@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./index.scss";
 import { Link, useParams } from "react-router-dom";
 import { connect } from "react-redux";
-import { setTypeMateri } from "Store/Action/materiAction";
+import { setTypeMateri, setMateriSlug } from "Store/Action/materiAction";
 
 function SidebarBtn(props) {
   const [idButton, setIdButton] = useState("");
@@ -12,8 +12,9 @@ function SidebarBtn(props) {
     return setIdButton(idButton === "" ? "sidebar-isopen" : "");
   };
 
-  const handleType = (typeMateri) => {
+  const handleType = (typeMateri, slugMateri) => {
     props.setTypeMateri(typeMateri);
+    props.setMateriSlug(slugMateri);
   };
 
   const { title, materi } = props;
@@ -29,7 +30,7 @@ function SidebarBtn(props) {
               <Link
                 className="sidebar-subbab-link"
                 to={`/materi/${slugKelas}/${item.slugMateriKelas}`}
-                onClick={() => handleType(item.type)}
+                onClick={() => handleType(item.type, item.slugMateriKelas)}
               >
                 {item.titleSubBab}
               </Link>
@@ -43,6 +44,7 @@ function SidebarBtn(props) {
 
 const mapDispatchToProps = {
   setTypeMateri,
+  setMateriSlug,
 };
 
 export default connect(null, mapDispatchToProps)(SidebarBtn);

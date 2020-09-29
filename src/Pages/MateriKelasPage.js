@@ -25,8 +25,15 @@ function MateriKelasPage(props) {
       }
     }
   };
+  // const activeSlug = () => {
+  //   if (slugMateriKelas == "") {
+  //     return slugMateri;
+  //   } else {
+  //     return slugMateriKelas;
+  //   }
+  // };
   const videoTemp = getVideo(slugMateri);
-  console.log(videoTemp);
+  console.log(type);
   return (
     <div className="materi-kelas">
       <Navbar isMateriPage title={Data.judul} />
@@ -34,15 +41,15 @@ function MateriKelasPage(props) {
         <SideBar data={Data} />
         <div className="konten-materi-kelas">
           <Switch>
-            <Route path={`/materi/${slugKelas}/${slugMateri}`}>
-              {/* <h1>{slugMateri}</h1> */}
-              <video src={videoTemp.video} controls />
-              {/* {type === "video" ? (
-                <video src={videoTemp.video} controls />
+            <Route path={`/materi/${slugKelas}/${slugMateriKelas}`}>
+              {/* <h1>{slugMateri}</h1>
+              <video src={videoTemp.video} controls /> */}
+              {type === "kuis" ? (
+                <Kuis data={videoTemp.kuis} />
               ) : (
-                // <Kuis data={videoTemp.kuis} />
-                ""
-              )} */}
+                <video src={videoTemp.video} controls />
+                // ""
+              )}
             </Route>
           </Switch>
         </div>

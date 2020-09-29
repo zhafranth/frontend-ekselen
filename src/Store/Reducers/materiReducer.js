@@ -1,5 +1,5 @@
 const initialState = {
-  slugMateriKelas: "ini state materi",
+  slugMateriKelas: "",
   type: "",
 };
 
