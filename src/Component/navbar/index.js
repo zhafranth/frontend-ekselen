@@ -21,7 +21,7 @@ function Navbar(props) {
               <img src={Logo} alt="" />
             </Link>
           </div>
-          <h3 className="title-navbar">Practice for Great UI Design</h3>
+          <h3 className="title-navbar">{props.title}</h3>
         </div>
       </header>
     );
