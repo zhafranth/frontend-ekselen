@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route, useParams } from "react-router-dom";
 import Navbar from "Component/navbar";
 import SideBar from "Component/sidebarMateriKelas/Index";
 import { connect } from "react-redux";
 import Kuis from "Component/kuis/Kuis";
-import VideoDummy from "Assets/Images/5.mp4";
+import { setTypeMateri } from "Store/Action/materiAction";
 
 // Data
 import DataKelas from "JSON/kelasSaya.json";
 
 function MateriKelasPage(props) {
+  const [typeMateri, setTypeMateri] = useState("");
   const { slugKelas, slugMateri } = useParams();
   const { slugMateriKelas, type } = props;
 
@@ -25,14 +26,19 @@ function MateriKelasPage(props) {
       }
     }
   };
-  // const activeSlug = () => {
-  //   if (slugMateriKelas == "") {
-  //     return slugMateri;
-  //   } else {
-  //     return slugMateriKelas;
-  //   }
-  // };
+  const activeSlug = () => {
+    if (slugMateriKelas === "") {
+      return slugMateri;
+    } else {
+      return slugMateriKelas;
+    }
+  };
   const videoTemp = getVideo(slugMateri);
+  // setTypeMateri(type);
+
+  const handleType = () => {
+    return type;
+  };
   console.log(type);
   return (
     <div className="materi-kelas">
@@ -41,10 +47,10 @@ function MateriKelasPage(props) {
         <SideBar data={Data} />
         <div className="konten-materi-kelas">
           <Switch>
-            <Route path={`/materi/${slugKelas}/${slugMateriKelas}`}>
-              {/* <h1>{slugMateri}</h1>
-              <video src={videoTemp.video} controls /> */}
-              {type === "kuis" ? (
+            <Route path={`/materi/${slugKelas}/${activeSlug()}`}>
+              {/* <h1>{slugMateri}</h1> */}
+              {/* <video src={videoTemp.video} controls /> */}
+              {handleType() === "kuis" ? (
                 <Kuis data={videoTemp.kuis} />
               ) : (
                 <video src={videoTemp.video} controls />
@@ -65,4 +71,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(MateriKelasPage);
+const mapDispatchToProps = {};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MateriKelasPage);
