@@ -25,7 +25,14 @@
       // display: flex;
       // align-items: center;
       // flex-direction: column;
-
+      .navbar-btn-hover {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 14px;
+      }
       &:hover {
         .list-kategori-nav {
           display: block;
@@ -82,6 +89,44 @@
       background-color: #495dc9;
       padding: 4px 16px;
       border-radius: 10px;
+    }
+  }
+
+  .navbar-profile {
+    .kelas-saya-navbar {
+      font-size: 14px;
+      margin-right: 0.5rem;
+    }
+    .img-profile-navbar {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      // cursor: default;
+      height: 80px;
+      &:hover {
+        .profile-navbar {
+          display: block;
+        }
+      }
+      .profile-navbar {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        list-style: none;
+        margin-top: 1.2rem;
+        border-radius: 5px;
+        z-index: 1;
+        padding: 0.4rem 0.8rem;
+        .profile-navbar-item {
+          .profile-navbar-link {
+            color: #000000;
+            text-transform: capitalize;
+            &:hover {
+              color: #2e2e2e;
+            }
+          }
+        }
+      }
     }
   }
 

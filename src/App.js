@@ -11,6 +11,7 @@ import {
   About,
   KelasSaya,
   MateriKelas,
+  Profile,
 } from "Pages";
 
 // Style Global
@@ -39,6 +40,7 @@ function App() {
           path="/materi/:slugKelas/:slugMateri"
           component={MateriKelas}
         ></Route>
+        <Route path="/profile" component={Profile} />
         <Route path="/example" component={Example}></Route>
         <Route component={Error}></Route>
       </Switch>

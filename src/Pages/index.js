@@ -8,3 +8,4 @@ export { default as About } from "Pages/AboutPage";
 export { default as Example } from "Pages/ExamplePage";
 export { default as KelasSaya } from "Pages/KelasSayaPage";
 export { default as MateriKelas } from "Pages/MateriKelasPage";
+export { default as Profile } from "Pages/ProfilePage";

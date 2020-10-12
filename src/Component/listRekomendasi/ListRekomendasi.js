@@ -32,7 +32,6 @@ export default function ListRekomendasi({ data }) {
   const activeClass = (classActive) => {
     return idButton === classActive ? " btn-active" : "";
   };
-  console.log(dataKelas.length);
   return (
     <div className="section">
       <div className="container list-rekomendasi">

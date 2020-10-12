@@ -66,7 +66,7 @@ class LoginPage extends Component {
                   </div>
                   <Link
                     className="btn btn-login-submit"
-                    to="/kelas-saya/progress/semua-kelas"
+                    to="/"
                     onClick={this.handleLogin}
                   >
                     Masuk

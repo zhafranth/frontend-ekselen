@@ -24,7 +24,7 @@ export default class KelasSayaPage extends Component {
   render() {
     const data = Object.assign({}, ...DataKelas.kelas);
     return (
-      <Layout isLoginPage>
+      <Layout kelasSaya>
         <div className="section">
           <div className="navbar-kelas-saya">
             <div className="container kelas-saya-menu">
