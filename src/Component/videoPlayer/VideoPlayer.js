@@ -21,8 +21,6 @@ const format = (seconds) => {
   return `${mm}:${ss}`;
 };
 
-let count = 0;
-
 export default function VideoPlayer({ video }) {
   const [state, setState] = useState({
     play: false,
@@ -43,7 +41,7 @@ export default function VideoPlayer({ video }) {
   const handleMute = () => {
     setState({ ...state, muted: !state.muted });
   };
-  const handleVolume = (e, newValue) => {
+  const handleVolume = (e) => {
     setState({
       ...state,
       volume: parseFloat(e.target.value / 100),

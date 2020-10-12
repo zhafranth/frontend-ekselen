@@ -2,13 +2,8 @@ import React, { Component } from "react";
 import Layout from "Component/layout/index";
 import HeroKategori from "Component/heroKategori";
 import Card from "Component/card";
-import PromoBanner from "Component/promoBanner";
-import ListCategory from "Component/listKategori";
 
 import DataKelas from "JSON/kelas.json";
-import Data from "JSON/landingPage.json";
-
-import { Link } from "react-router-dom";
 
 import { connect } from "react-redux";
 
@@ -28,9 +23,9 @@ class KategoriPage extends Component {
     }
   };
   render() {
-    const { kategoriAktif } = this.props;
+    const { kategoriAktif, isLogin } = this.props;
     const kelas = this.getProduct(kategoriAktif);
-    console.log(this.state.slugId);
+    console.log(isLogin);
     return (
       <Layout>
         <HeroKategori />
@@ -68,6 +63,7 @@ class KategoriPage extends Component {
 const mapStateToProps = (state) => {
   return {
     kategoriAktif: state.kategoriReducer.kategoriAktif,
+    isLogin: state.loginReducer.isLogin,
   };
 };
 

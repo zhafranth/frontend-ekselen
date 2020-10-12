@@ -39,7 +39,6 @@ class DetailPage extends Component {
           instrukturName={kelasDetail.instruktur.nama}
           instrukturRole={kelasDetail.instruktur.role}
           instrukturImg={kelasDetail.instruktur.photo}
-          rate={kelasDetail.rate}
         />
         <KontenDetail />
         <ListRekomendasiDetail data={DataKelas.kelas} />

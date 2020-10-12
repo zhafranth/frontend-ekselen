@@ -1,5 +1,4 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
 import "./index.scss";
 import { Carousel } from "antd";
 import Card from "Component/card";

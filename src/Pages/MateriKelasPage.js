@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { Switch, Route, useParams } from "react-router-dom";
 import Navbar from "Component/navbar";
 import SideBar from "Component/sidebarMateriKelas/Index";
 import { connect } from "react-redux";
 import Kuis from "Component/kuis/Kuis";
-import { setTypeMateri } from "Store/Action/materiAction";
+// import { setTypeMateri } from "Store/Action/materiAction";
 import VideoPlayer from "Component/videoPlayer/VideoPlayer";
 
 // Data
 import DataKelas from "JSON/kelasSaya.json";
 
 function MateriKelasPage(props) {
-  const [typeMateri, setTypeMateri] = useState("");
+  // const [typeMateri, setTypeMateri] = useState("");
   const { slugKelas, slugMateri } = useParams();
   const { slugMateriKelas, type } = props;
 

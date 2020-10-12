@@ -2,7 +2,6 @@ import React from "react";
 import KategoriBtn from "Component/kategoriButton";
 
 import "./index.scss";
-import { Kategori } from "Pages";
 
 export default function index(props) {
   return (

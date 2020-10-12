@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./index.scss";
-import { Carousel, Row, Col, Layout } from "antd";
+import { Carousel } from "antd";
 import { Link } from "react-router-dom";
 
 // Component

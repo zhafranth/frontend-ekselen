@@ -3,7 +3,6 @@ import "./index.scss";
 import StarRatings from "react-star-ratings";
 
 // Image
-import ImgInstruktur from "Assets/Images/instruktur-profile-hero-detail.png";
 import VideoOverview from "Assets/Images/video-overview.png";
 
 export default function index(props) {

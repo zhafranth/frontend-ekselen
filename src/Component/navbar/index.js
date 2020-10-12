@@ -35,7 +35,7 @@ function Navbar(props) {
       </div>
       <div className="navbar-btn">
         <div className="navbar-btn-item item-btn-toogle">
-          <a className="navbar-btn-hover">Course Category</a>
+          <button className="navbar-btn-hover">Course Category</button>
           <ul className="list-kategori-nav">
             {props.data.map((item, i) => {
               return (

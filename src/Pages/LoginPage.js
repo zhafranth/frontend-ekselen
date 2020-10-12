@@ -2,8 +2,13 @@ import React, { Component } from "react";
 import Layout from "Component/layout/index";
 import Logo from "Assets/Images/logo.png";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { setLoginStatus } from "Store/Action/loginAction";
 
-export default class LoginPage extends Component {
+class LoginPage extends Component {
+  handleLogin = () => {
+    this.props.setLoginStatus(true);
+  };
   render() {
     return (
       <Layout isLoginPage>
@@ -62,6 +67,7 @@ export default class LoginPage extends Component {
                   <Link
                     className="btn btn-login-submit"
                     to="/kelas-saya/progress/semua-kelas"
+                    onClick={this.handleLogin}
                   >
                     Masuk
                   </Link>
@@ -92,6 +98,7 @@ export default class LoginPage extends Component {
                         borderRadius: 0,
                         padding: 0,
                       }}
+                      onClick={this.handleLogin}
                     >
                       daftar
                     </button>
@@ -106,3 +113,9 @@ export default class LoginPage extends Component {
     );
   }
 }
+
+const mapDispatchToProps = {
+  setLoginStatus,
+};
+
+export default connect(null, mapDispatchToProps)(LoginPage);

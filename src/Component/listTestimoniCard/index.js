@@ -8,7 +8,7 @@ import Next from "Assets/Images/next.png";
 import Previous from "Assets/Images/previous.png";
 
 function ArrowNext(props) {
-  const { style, onClick, className } = props;
+  const { onClick, className } = props;
   return (
     <div
       className={className}
@@ -29,7 +29,7 @@ function ArrowNext(props) {
   );
 }
 function ArrowPrev(props) {
-  const { style, onClick, className } = props;
+  const { onClick, className } = props;
   return (
     <div
       className={className}

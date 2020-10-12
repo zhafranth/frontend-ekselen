@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import "./index.scss";
 import StarRatings from "react-star-ratings";
 import { Link } from "react-router-dom";
@@ -20,7 +20,7 @@ export default function Index(props) {
   };
   return (
     <div className="card card-product">
-      <img className="card-img-top" src={props.cover} alt="Card image cap" />
+      <img className="card-img-top" src={props.cover} alt="card" />
       <div className="card-body">
         <h4 className="kategori-kelas text-capitalize">{props.kategori}</h4>
         <div className="judul-kelas">{props.judul}</div>
@@ -88,8 +88,10 @@ export default function Index(props) {
               Lihat Detail
             </Link>
             <div className="button-card-hover">
-              <Link className="mulai-belajar">Mulai Belajar</Link>
-              <Link className="wishlist-btn">
+              <Link className="mulai-belajar" to="">
+                Mulai Belajar
+              </Link>
+              <Link className="wishlist-btn" to="">
                 {" "}
                 <AiFillHeart />
               </Link>

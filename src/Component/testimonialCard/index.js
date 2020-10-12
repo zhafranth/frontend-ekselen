@@ -1,9 +1,6 @@
 import React from "react";
 import "./index.scss";
 
-// img
-import ImgTestimoniUser from "Assets/Images/user-testimoni.png";
-
 export default function index(props) {
   return (
     <div className="card-testimoni">
