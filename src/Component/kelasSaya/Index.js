@@ -1,6 +1,9 @@
 import React from "react";
-import { Route, Switch, NavLink } from "react-router-dom";
+import { Route, Switch, NavLink, Link } from "react-router-dom";
 import "./index.scss";
+
+// Image
+import ImageKelasKosong from "Assets/Images/kelas-kosong.png";
 
 import CardProgressKelas from "./CardProgressKelas";
 
@@ -37,10 +40,21 @@ export default function KelasSaya(props) {
               <CardProgressKelas data={props.data} />
             </Route>
             <Route path="/kelas-saya/progress/progress-kelas">
-              <h1>ini semua progress</h1>
+              <CardProgressKelas data={props.data} />
             </Route>
             <Route path="/kelas-saya/progress/lulus">
-              <h1>ini semua lulus</h1>
+              <div className="container kelas-kosong">
+                <div className="row">
+                  <div className="img-kelas-kosong">
+                    <img src={ImageKelasKosong} alt="" />
+                  </div>
+                  <h3>Kamu belum memiliki kelas</h3>
+                  <p>Silahkan kembali kehalaman kategori untuk membeli kelas</p>
+                  <Link to="/" className="btn-kelas-kosong">
+                    Kategori Kelas
+                  </Link>
+                </div>
+              </div>
             </Route>
           </Switch>
         </div>

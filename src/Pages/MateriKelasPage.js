@@ -5,6 +5,7 @@ import SideBar from "Component/sidebarMateriKelas/Index";
 import { connect } from "react-redux";
 import Kuis from "Component/kuis/Kuis";
 import { setTypeMateri } from "Store/Action/materiAction";
+import VideoPlayer from "Component/videoPlayer/VideoPlayer";
 
 // Data
 import DataKelas from "JSON/kelasSaya.json";
@@ -53,7 +54,7 @@ function MateriKelasPage(props) {
               {handleType() === "kuis" ? (
                 <Kuis data={videoTemp.kuis} />
               ) : (
-                <video src={videoTemp.video} controls />
+                <VideoPlayer video={videoTemp.video} />
                 // ""
               )}
             </Route>
