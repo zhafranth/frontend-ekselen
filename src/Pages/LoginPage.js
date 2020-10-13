@@ -11,7 +11,7 @@ class LoginPage extends Component {
   };
   render() {
     return (
-      <Layout isLoginPage>
+      <Layout kelasSaya>
         <div className="section-login-register">
           <div className="card-login">
             <div className="row row-login">

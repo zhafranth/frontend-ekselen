@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import ReactPlayer from "react-player";
 import screenfull from "screenfull";
+import "./index.scss";
 
 // Icon
 import { FaPlay, FaPause } from "react-icons/fa";
@@ -97,7 +98,9 @@ export default function VideoPlayer({ video }) {
         volume={volume}
         onProgress={handleProgress}
       />
-      <div className="controller-video">
+      <div
+        className={`controller-video ${play == false ? "show-controller" : ""}`}
+      >
         {/* Play Control */}
         <div className="playPauseButton">
           <div className="btn-playPause" onClick={handlePlay}>
