@@ -21,7 +21,7 @@ const format = (seconds) => {
   }
   return `${mm}:${ss}`;
 };
-
+let count = 0;
 export default function VideoPlayer({ video }) {
   const [state, setState] = useState({
     play: false,
@@ -34,6 +34,7 @@ export default function VideoPlayer({ video }) {
 
   const playerContainerRef = useRef();
   const playRef = useRef();
+  const controlsRef = useRef();
 
   const handlePlay = () => {
     setState({ ...state, play: !state.play });
@@ -55,7 +56,16 @@ export default function VideoPlayer({ video }) {
     setState({ ...state, screen: !screen });
   };
   const handleProgress = (changeState) => {
-    console.log(changeState);
+    // console.log(changeState);
+    if (count > 3) {
+      controlsRef.current.style.visibility = "hidden";
+      count = 0;
+    }
+
+    if (controlsRef.current.style.visibility == "visible") {
+      count += 1;
+    }
+
     setState({ ...state, ...changeState });
   };
   const handleSeek = (e) => {
@@ -82,11 +92,19 @@ export default function VideoPlayer({ video }) {
 
   const totalDuration = format(duration);
 
+  const handleMouseMove = () => {
+    controlsRef.current.style.visibility = "visible";
+  };
+
   // Distructure State
   const { play, muted, screen, volume, played } = state;
 
   return (
-    <div className="video-wrapper" ref={playerContainerRef}>
+    <div
+      className="video-wrapper"
+      ref={playerContainerRef}
+      onMouseMove={handleMouseMove}
+    >
       <ReactPlayer
         ref={playRef}
         url={video}
@@ -98,9 +116,7 @@ export default function VideoPlayer({ video }) {
         volume={volume}
         onProgress={handleProgress}
       />
-      <div
-        className={`controller-video ${play == false ? "show-controller" : ""}`}
-      >
+      <div className={`controller-video `} ref={controlsRef}>
         {/* Play Control */}
         <div className="playPauseButton">
           <div className="btn-playPause" onClick={handlePlay}>
